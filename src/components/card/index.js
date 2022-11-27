@@ -4,14 +4,14 @@ import { Body } from "../body";
 import { Footer } from "../footer";
 import { Header } from "../header";
 
-export function Card() {
+export function Card({ imageURI, name, hp, description }) {
   return (
     <View style={styles.container}>
-      <Header name="Pikachu" hp={300} />
+      <Header name={name} hp={hp} />
 
-      <Body />
+      <Body imageURI={imageURI} />
 
-      <Footer />
+      <Footer description={description} />
     </View>
   );
 }

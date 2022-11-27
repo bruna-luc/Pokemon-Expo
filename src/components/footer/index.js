@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-export function Footer() {
+export function Footer({ description }) {
   return (
     <View styles={styles.container}>
       <View style={styles.header}>
@@ -9,12 +9,7 @@ export function Footer() {
       </View>
 
       <View style={styles.body}>
-        <Text>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-          pariatur nesciunt autem hic veritatis impedit libero ipsum eaque sit
-          aliquid quas assumenda eum, beatae dicta accusantium nemo. Unde,
-          possimus est.
-        </Text>
+        <Text>{description}</Text>
       </View>
     </View>
   );
@@ -32,7 +27,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   body: {
-    backgroundColor: "#fff",
+    backgroundColor: "#ffffff90",
     padding: 10,
+    borderBottomRightRadius: 10,
+    borderBottomLeftRadius: 10,
   },
 });
